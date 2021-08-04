@@ -17,6 +17,13 @@ if Start == 'yes'.lower():
     elif nick == '2':
         nn = input('What shall i call you then? ')
         nickname = nn
+time.sleep(2)
+travel = input(f'Ok {nickname}, now i know what to call you, are you heading to Vortex? ')
+if travel == 'Yes'.lower():
+    print('Alright, ill take you there, when we get there we will have to meet the cardinal.')
+else:
+    answer1 = input('Are you sure? ')
+    if answer1 ==
 
 
 
