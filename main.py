@@ -23,7 +23,8 @@ if travel == 'Yes'.lower():
     print('Alright, ill take you there, when we get there we will have to meet the cardinal.')
 else:
     answer1 = input('Are you sure? ')
-    if answer1 ==
+    if answer1 == 'Yes'.lower():
+        askagain = input('Are you very sure? ')
 
 
 
