@@ -5,7 +5,7 @@ atk = (5)
 defense = (5)
 mana = (50)
 import random
-atkchoose = ['Swordsmen', 'musketeer', 'beserker']
+atkchoose = ['Swordsmen', 'Boxer', 'beserker']
 defchoose = ['backup', 'tanker', 'sheilder']
 manachoose =['mage', 'sage', 'elementalist']
 healthchoose = ['healer', 'priest', 'lifestealer']
@@ -79,9 +79,16 @@ if quest == 'yes' or 'ye' or 'yuh':
     prominant = input(f'Now i ask you what will be your most prominant stat? Remember this, your answer will decide your class, choose carefully: ')
     if prominant == 'atk' or 'attack':
         atk = atk + 50
-        classs = 'swordsmen'
-        print(f'Now you will be a , and your most prominant stat will be attack which is now {atk}.')
-
+        classs = random.choice(atkchoose)
+        print(f'Now you will be a {classs}, and your most prominant stat will be attack which is now {atk}.')
+    elif prominant == 'def' or 'defense':
+        defense = defense + 50
+        classs = random.choice(defchoose)
+        print(f'You have chosen defense to be your most prominant stat, it is now {defense}, your class is {classs}')
+    elif prominant == 'mana':
+        mana = mana + 50
+        classs = random.choice(manachoose)
+        print(f"You have chosen the mana stat to be your most prominant stat so your mana stat is now {mana}, and your class is {classs}")
 
 
 
