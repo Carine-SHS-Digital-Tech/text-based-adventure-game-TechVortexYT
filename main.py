@@ -4,7 +4,11 @@ health = (100)
 atk = (5)
 defense = (5)
 mana = (50)
-
+import random
+atkchoose = ['Swordsmen', 'musketeer', 'beserker']
+defchoose = ['backup', 'tanker', 'sheilder']
+manachoose =['mage', 'sage', 'elementalist']
+healthchoose = ['healer', 'priest', 'lifestealer']
 
 
 Start = input('Would you like to start the adventure? Yes Or No ')
@@ -76,7 +80,7 @@ if quest == 'yes' or 'ye' or 'yuh':
     if prominant == 'atk' or 'attack':
         atk = atk + 50
         classs = 'swordsmen'
-        print(f'Now you will be a swordsmen, and your most prominant stat will be attack which is now {atk}.')
+        print(f'Now you will be a , and your most prominant stat will be attack which is now {atk}.')
 
 
 
