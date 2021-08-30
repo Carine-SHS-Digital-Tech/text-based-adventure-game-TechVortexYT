@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e7b67a0e-f2db-43d3-ae56-1ce83045cf24" name="Default Changelist" comment="0.0.3|added more story and more things work properly">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/battle.py" beforeDir="false" afterPath="$PROJECT_DIR$/battle.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/story.py" beforeDir="false" afterPath="$PROJECT_DIR$/battle.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +39,7 @@
       <recent name="R:\text-based-adventure-game-TechVortexYT" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.battle">
+  <component name="RunManager" selected="Python.main">
     <configuration name="aland" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="text-based-adventure-game-TechVortexYT" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -105,8 +105,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.battle" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.battle" />
         <item itemvalue="Python.aland" />
       </list>
     </recent_temporary>

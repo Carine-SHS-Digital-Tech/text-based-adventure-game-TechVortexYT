@@ -1,15 +1,13 @@
 import time
-#stats
-health = (50)
-atk = (5)
-defense = (5)
-mana = (50)
-import random
-atkchoose = ['Swordsmen', 'Boxer', 'beserker']
-defchoose = ['backup', 'tanker', 'sheilder']
-manachoose =['mage', 'sage', 'elementalist']
-healthchoose = ['healer', 'priest', 'lifestealer']
-poop = True
+import sys
+from random import randint
+chance = randint(1, 5)
+def slowprint(s):
+    for c in s + '\n':
+        sys.stdout.write(c)
+        sys.stdout.flush()
+        time.sleep(1/10)
+
 
 Start = input('Would you like to start the adventure? Yes Or No ')
 if Start == 'yes'.lower():
@@ -75,31 +73,71 @@ quest = input(f'{gn}: I have brought this youth to do this adventure quest, will
 if quest == 'yes' or 'ye' or 'yuh':
     print(f'???: Ok {nickname}, thou has chosen to pursue this quest, do so with respect')
     time.sleep(2)
-    print(f'???: here are your stats child: Health: {health}, Attack: {atk}, Defense: {defense}, Mana(magic): {mana} ')
-while poop == True:
-    prominant = input(f'Now i ask you what will be your most prominant stat? Remember this, your answer will decide your class, choose carefully: ')
-    if prominant == 'atk' or 'attack':
-        atk = atk + 50
-        classs = random.choice(atkchoose)
-        print(f'Now you will be a {classs}, and your most prominant stat will be attack which is now {atk}.')
-        poop = False
-    elif prominant == 'def' or 'defense':
-        defense = defense + 50
-        classs = random.choice(defchoose)
-        poop = False
-        print(f'You have chosen defense to be your most prominant stat, it is now {defense}, your class is {classs}')
-        poop = False
-    elif prominant == 'mana':
-        mana = mana + 50
-        classs = random.choice(manachoose)
-        print(f"You have chosen the mana stat to be your most prominant stat so your mana stat is now {mana}, and your class is {classs}")
-        poop = False
-    elif prominant == 'hp' or 'health':
-        health = health + 50
-        classs = random.choice(healthchoose)
-        poop = False
+traveling = True
+while traveling == True:
+    travel = input("Where will you go? grasslands, desert, sea or spongebob's house? ")
+    if travel == 'grasslands' or 'Grasslands' or 'grslands':
+        slowprint("you are going to the grasslands, through there you can go to the hell gate to fight the God Of Plants")
+        traveling = False
+        fight = True
+        while fight == True:
+            print("You have arrived in the Grasslands and spotted the God Of Plants, you go into battle thinking you can easily defeat him, you are so wrong.")
+            choose = input('Will you move to the right, left, forwards or backwards? ')
+            if choose == 'left':
+                print("you moved left and the God Predicted your move and killed you ")
+                print("Game will end now.")
+                exit()
+            elif choose == 'right':
+                print("you rolled to the right and tripped on your sword during it, you were spotted by the God and killed")
+                print('The game will end now.')
+                exit()
+            elif choose == 'backwards':
+                print("You backflipped backwards but that was a simple move and you were smited into nothingness.")
+                print('The game will end now')
+                exit()
+            elif choose == 'forwards':
+                print("You leaped backwards and attacked the god, it was unpredictable and stupid but you pulled it off *clap clap*.")
+                run = input('The God is on half health, will you attack him or try running away? ')
+                if run == 'Run' or 'run' or 'run away':
+                    print('calculating your chance to escape now....')
+                    if chance >= 3:
+                        print('You ran away and are now going to the hell gate to fight the final boss, the devil himself')
+                        fight = False
+                    elif chance <= 2:
+                        print('You could not run away, you will fight through the god')
+                        combat = input("will you attack him from right or left? ")
+                        if combat == 'left':
+                            print('You beat him, go you!')
+                            fight = False
+                        elif combat == 'right':
+                            print('you have died')
+                            print('the game will end now')
+                            exit()
+                elif run == 'fight' or 'attack':
+                    combat = input("will you attack him from right or left? ")
+                    if combat == 'left':
+                            print('You beat him, go you!')
+                            fight = False
+                    elif combat == 'right':
+                            print('you have died')
+                            print('the game will end now')
+                            exit()
+
+
+
+    if travel == 'desert':
+        slowprint('You are now going to the desert through here you can go and fight the God Of The Deserts')
+        traveling = False
+    if travel == 'sea':
+        slowprint('You are now travelling through the seas, Here is a potion of breathing to go throught the ocean and fight the sea dragon of doom')
+        traveling = False
+    if travel == "spongebob's house":
+        slowprint("you are traveling to spongebob's house, there you can buy a super ticket that will let you travel to any area like hell or buy a burger to eat and go to the final boss")
+        traveling = False
     else:
-        poop = True
+        traveling = True
+
+
 
 
 
