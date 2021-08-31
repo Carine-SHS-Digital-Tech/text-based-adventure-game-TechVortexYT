@@ -75,49 +75,50 @@ if quest == 'yes' or 'ye' or 'yuh':
     time.sleep(2)
 traveling = True
 while traveling == True:
-    travel = input("Where will you go? grasslands, desert, sea or spongebob's house? ")
-    if travel == 'grasslands' or 'Grasslands' or 'grslands':
-        slowprint("you are going to the grasslands, through there you can go to the hell gate to fight the God Of Plants")
-        traveling = False
-        fight = True
-        while fight == True:
-            print("You have arrived in the Grasslands and spotted the God Of Plants, you go into battle thinking you can easily defeat him, you are so wrong.")
-            choose = input('Will you move to the right, left, forwards or backwards? ')
-            if choose == 'left':
-                print("you moved left and the God Predicted your move and killed you ")
-                print("Game will end now.")
-                exit()
-            elif choose == 'right':
+
+    slowprint("you are going to the grasslands, through there you can go to the hell gate to fight the God Of Plants")
+    traveling = False
+    fight = True
+    while fight == True:
+        print("You have arrived in the Grasslands and spotted the God Of Plants, you go into battle thinking you can easily defeat him, you are so wrong.")
+        choose = input('Will you move to the right, left, forwards or backwards? ')
+        if choose == 'left':
+            print("you moved left and the God Predicted your move and killed you ")
+            print("Game will end now.")
+            exit()
+        elif choose == 'right':
                 print("you rolled to the right and tripped on your sword during it, you were spotted by the God and killed")
                 print('The game will end now.')
                 exit()
-            elif choose == 'backwards':
+        elif choose == 'backwards':
                 print("You backflipped backwards but that was a simple move and you were smited into nothingness.")
                 print('The game will end now')
                 exit()
-            elif choose == 'forwards':
+        elif choose == 'forwards':
                 print("You leaped backwards and attacked the god, it was unpredictable and stupid but you pulled it off *clap clap*.")
                 run = input('The God is on half health, will you attack him or try running away? ')
-                if run == 'Run' or 'run' or 'run away':
-                    print('calculating your chance to escape now....')
-                    if chance >= 3:
-                        print('You ran away and are now going to the hell gate to fight the final boss, the devil himself')
+        if run == 'Run' or 'run' or 'run away':
+                print('calculating your chance to escape now....')
+                if chance >= 3:
+                    print('You ran away and are now going to die lonely')
+                    fight = False
+                elif chance <= 2:
+                    print('You could not run away, you will fight through the god')
+                    combat = input("will you attack him from right or left? ")
+                    if combat == 'left':
+                        print('You beat him, go you!')
                         fight = False
-                    elif chance <= 2:
-                        print('You could not run away, you will fight through the god')
-                        combat = input("will you attack him from right or left? ")
-                        if combat == 'left':
-                            print('You beat him, go you!')
-                            fight = False
-                        elif combat == 'right':
-                            print('you have died')
-                            print('the game will end now')
-                            exit()
+                    elif combat == 'right':
+                        print('you have died')
+                        print('the game will end now')
+                        exit()
                 elif run == 'fight' or 'attack':
                     combat = input("will you attack him from right or left? ")
                     if combat == 'left':
                             print('You beat him, go you!')
                             fight = False
+                            print('you will live in peace alone now')
+                            exit()
                     elif combat == 'right':
                             print('you have died')
                             print('the game will end now')
@@ -125,15 +126,7 @@ while traveling == True:
 
 
 
-    if travel == 'desert':
-        slowprint('You are now going to the desert through here you can go and fight the God Of The Deserts')
-        traveling = False
-    if travel == 'sea':
-        slowprint('You are now travelling through the seas, Here is a potion of breathing to go throught the ocean and fight the sea dragon of doom')
-        traveling = False
-    if travel == "spongebob's house":
-        slowprint("you are traveling to spongebob's house, there you can buy a super ticket that will let you travel to any area like hell or buy a burger to eat and go to the final boss")
-        traveling = False
+
     else:
         traveling = True
 
